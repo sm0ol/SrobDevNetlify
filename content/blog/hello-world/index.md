@@ -1,22 +1,16 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
-description: "Hello World"
+title: The Start of Something (Hopefully) Great
+date: "2019-08-16"
+description: "New Adventure in Web Development..."
 ---
 
-This is my first post on my new fake blog! How exciting!
+Hey everyone.  
 
-I'm sure I'll write a lot more interesting things in the future.
+As you can see, this site is a work in progress and this is just what I could get up in one evening.  
+My vision for this site is to simply be a place to store/link my resume, portfolio, and write any posts about web development topics that I find interesting, or feel competent enough to write about.  I don't expect it to turn into much, but it'll be a good place to start experimenting.  
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+Right now, I work as a UI Engineer for Comcast Technology Solutions.  We work on a stack of AngularJS (1.7) and Node 8 over a Postgres DB.  Despite continuing to learn new things at work, I feel that I've stagnated in some ways, especially in regards to newer frameworks such as React, Vue, etc.  My plan is for this site to be one of the driving forces behind keeping myself motivated to learn and expand my knowledge as a developer, so that I can have portfolio projects (and small experimental things) to link here.  
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+Teaching and writing about new topics is also one of the best ways to learn.  I'm not much of a blogger, and have never written about tech topics, but this is at least a small step in that direction.
 
-![Chinese Salty Egg](./salty_egg.jpg)
+Thanks for reading, and I'll be sure to have more content up as I learn and grow in this new adventure.
