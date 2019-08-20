@@ -1,11 +1,40 @@
 import Typography from "typography"
 import Wordpress2016 from "typography-theme-wordpress-2016"
+// import { useStaticQuery, graphql } from "gatsby"
+import image from '../../content/assets/blur-breathtaking-clouds-1903702.jpg'
 
 Wordpress2016.overrideThemeStyles = () => {
+  // const data = useStaticQuery(graphql`
+  //   query BioQuery {
+  //     avatar: file(absolutePath: { regex: "/profile_pic.jpg/" }) {
+  //       childImageSharp {
+  //         fixed(width: 50, height: 50) {
+  //           ...GatsbyImageSharpFixed
+  //         }
+  //       }
+  //     }
+  //     site {
+  //       siteMetadata {
+  //         author
+  //         social {
+  //           twitter
+  //         }
+  //       }
+  //     }
+  //   }
+  // `)
+
   return {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
+    "body": {
+      // backgroundImage: `url(../../content/assets/blur-breathtaking-clouds-1903702.jpg)`
+      height: `100%`,
+      backgroundImage: `url(${image})`,
+      backgroundRepeat: `no-repeat`,
+      backgroundAttachment: `fixed`
+    }
   }
 }
 

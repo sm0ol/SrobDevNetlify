@@ -54,9 +54,18 @@ class Layout extends React.Component {
     return (
       <div
         style={{
+          borderRadius: `30px`,
+          display: `flex`,
+          flexGrow: `1`,
+          flexFlow: `column`,
+          height: `100%`,
+          backgroundColor: `#ffffff`,
+          boxShadow: `0px 0px 5px 5px rgba(0,0,0,0.50)`,
+          marginTop: rhythm(0.5),
+          marginBottom: rhythm(0.5),
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
+          maxWidth: rhythm(30),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
       >
