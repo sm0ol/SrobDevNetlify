@@ -7,6 +7,16 @@ module.exports = {
     social: {
       twitter: `AtroxiGG`,
     },
+    menuLinks: [
+      {
+        name: 'home',
+        link: '/'
+      },
+      {
+        name: 'resumePage',
+        link: '/resume'
+      }
+    ]
   },
   plugins: [
     {
@@ -74,5 +84,6 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-styled-components`
   ],
 }
