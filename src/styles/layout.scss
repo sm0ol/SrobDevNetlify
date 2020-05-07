@@ -1,0 +1,41 @@
+.layout {
+    display: flex;
+    flex-flow: column;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    right: 5%;
+    justify-content: center center;
+}
+
+.layout__container {
+    display: flex;
+    flex-flow: row;
+}
+
+.layout__articles {
+    display: flex;
+    flex-grow: 1;
+    flex-flow: column;
+    height: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 
+        12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+        -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    width: 70vw;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .layout {
+        top: 5%;
+    }
+
+    .layout__container {
+        flex-flow: column;
+    }
+
+    .layout__articles {
+        width: auto;
+    }
+}

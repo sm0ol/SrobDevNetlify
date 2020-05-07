@@ -1,0 +1,40 @@
+.navbar__container {
+    margin: 5px;
+    background: #e0e0e0;
+    width: auto;
+    position: sticky;
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    flex-grow: 1;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 80vw;
+}
+
+.navbar__button-neumorphic {
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.25),
+                -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+    margin-right: 15px;
+
+    &:active {
+        box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2),
+                    inset -6px -6px 10px 0 rgba(255, 255, 255, 0.5);
+    }
+
+    a {
+        opacity: 70%;
+        color: black;
+        box-shadow: none;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .navbar__container {
+        justify-content: center;
+    }
+}

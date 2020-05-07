@@ -30,10 +30,15 @@ Wordpress2016.overrideThemeStyles = () => {
     },
     "body": {
       // backgroundImage: `url(../../content/assets/blur-breathtaking-clouds-1903702.jpg)`
-      height: `auto`,
-      backgroundImage: `url(${image})`,
-      backgroundRepeat: `no-repeat`,
-      backgroundAttachment: `fixed`,
+      height: `100vh`,
+      background: `#e0e0e0`,
+      display: `flex`,
+      flexFlow: `column`,
+      alignItems: `center`,
+      justifyContent: `center`
+      // backgroundImage: `url(${image})`,
+      // backgroundRepeat: `no-repeat`,
+      // backgroundAttachment: `fixed`,
     }
   }
 }

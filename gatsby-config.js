@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Srob Dev`,
+    title: `Samuel Robertson`,
     author: `Samuel Robertson`,
     description: `My starter blog and website set up with Gatsby.`,
     siteUrl: `https://srob.dev`,
@@ -84,6 +84,7 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-sass`
   ],
 }

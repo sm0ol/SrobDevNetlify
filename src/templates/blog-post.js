@@ -40,15 +40,20 @@ class BlogPostTemplate extends React.Component {
                 {post.frontmatter.date}
               </p>
             </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+            <section 
+              style={{
+                overflowY: `scroll`,
+                height: `300px`,
+              }}
+             dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr
               style={{
                 marginBottom: rhythm(1),
               }}
             />
-            <footer>
+            {/* <footer>
               <Bio />
-            </footer>
+            </footer> */}
           </article>
 
           <nav>
