@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
@@ -17,7 +16,7 @@ class BlogIndex extends React.Component {
       <div>
         <Layout location={this.props.location} title={siteTitle} navlinks={links}>
             <SEO title="All posts" />
-            <Bio />
+            {/* <Bio /> */}
             {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
@@ -26,6 +25,7 @@ class BlogIndex extends React.Component {
                     <h3
                       style={{
                         marginBottom: rhythm(1 / 4),
+                        fontFamily: `"Proxima Nova", "Helvetica Neue", Helvetica, Arial, sans-serif`
                       }}
                     >
                       <Link style={{ boxShadow: `none` }} to={node.fields.slug}>

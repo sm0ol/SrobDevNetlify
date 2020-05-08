@@ -1,93 +1,35 @@
 import React from "react"
-import { Link, StaticQuery } from "gatsby"
 import Navbar from '../components/navbar'
-import { rhythm, scale } from "../utils/typography"
+import { rhythm } from "../utils/typography"
+import QuickBio from "./quickBio"
 
+import '../styles/layout.scss';
 class Layout extends React.Component {
-  render() {
-    const { location, title, navlinks, children } = this.props
-    
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+  render() {
+    const { navlinks, children } = this.props
+    
     return (
-      <div
-        style={{
-          display: `flex`,
-          flexFlow: `column`,
-          justifyContent: `center center`
-        }}
-      >
-        {/* <Navbar navlinks={navlinks}/> */}
+      <div className="global-container">
+        <div className="layout">
+          <Navbar navlinks={navlinks}/>
           <div
-          style={{
-            borderRadius: `30px`,
-            display: `flex`,
-            flexGrow: `1`,
-            flexFlow: `column`,
-            height: `100%`,
-            backgroundColor: `#ffffff`,
-            boxShadow: `0px 0px 5px 5px rgba(0,0,0,0.50)`,
-            marginTop: rhythm(0.5),
-            marginBottom: rhythm(0.5),
-            marginLeft: `auto`,
-            marginRight: `auto`,
-            maxWidth: rhythm(30),
-            padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-          }}
-        >
-          <header>{header}</header>
-          <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+            className="layout__container">
+            <QuickBio />
+            <div className="layout__articles"
+              style={{
+                marginTop: rhythm(0.5),
+                marginBottom: rhythm(0.5),
+                marginLeft: `auto`,
+                marginRight: `auto`,
+                padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+              }}
+            >
+              <main>{children}</main>
+            </div>
+          </div>
         </div>
       </div>
-      
     )
   }
 }

@@ -1,9 +1,7 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 
-import Bio from "../components/bio"
 import Layout from "../components/layout"
-import Navbar from "../components/navbar"
 import SEO from "../components/seo"
 import { rhythm, scale } from "../utils/typography"
 
@@ -40,15 +38,20 @@ class BlogPostTemplate extends React.Component {
                 {post.frontmatter.date}
               </p>
             </header>
-            <section dangerouslySetInnerHTML={{ __html: post.html }} />
+            <section 
+              style={{
+                overflowY: `scroll`,
+                height: `300px`,
+              }}
+             dangerouslySetInnerHTML={{ __html: post.html }} />
             <hr
               style={{
                 marginBottom: rhythm(1),
               }}
             />
-            <footer>
+            {/* <footer>
               <Bio />
-            </footer>
+            </footer> */}
           </article>
 
           <nav>
