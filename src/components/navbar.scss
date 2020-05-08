@@ -8,13 +8,12 @@
     flex-flow: row;
     flex-grow: 1;
     justify-content: flex-start;
-    width: 100%;
-    max-width: 80vw;
+    width: 80vw;
 }
 
 .navbar__button-neumorphic {
     border: none;
-    background: none;
+    background: #e0e0e0;
     cursor: pointer;
     border-radius: 10px;
     box-shadow: 5px 5px 8px 0 rgba(0, 0, 0, 0.25),
@@ -36,5 +35,6 @@
 @media only screen and (min-width: 320px) and (max-width: 480px) {
     .navbar__container {
         justify-content: center;
+        width: 100%;
     }
 }

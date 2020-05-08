@@ -9,8 +9,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { fab, faLinkedin, faGithub, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import { faMapMarkedAlt, faEnvelope, faArrowAltCircleDown, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
+import { fab, faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faMapMarkedAlt, faEnvelope, faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { rhythm } from "../utils/typography"
@@ -32,15 +32,12 @@ const QuickBio = () => {
       site {
         siteMetadata {
           author
-          social {
-            twitter
-          }
         }
       }
     }
   `)
 
-  const { author, social } = data.site.siteMetadata
+  const { author } = data.site.siteMetadata
   const [showInfo, setShowInfo] = React.useState(true);
   return (
     <div 
@@ -55,9 +52,7 @@ const QuickBio = () => {
         fixed={data.avatar.childImageSharp.fixed}
         alt={author}
         style={{
-        //   marginRight: rhythm(1 / 2),
           marginBottom: `20px`,
-        //   minWidth: 50,
           borderRadius: `100%`,
         }}
         imgStyle={{
@@ -97,13 +92,13 @@ const QuickBio = () => {
           </div>
           <div className="bio__row">
               <FontAwesomeIcon icon={faLinkedin}/>
-              <a href="https://www.linkedin.com/in/srob-dev" target="_blank" className="bio__a">
+              <a href="https://www.linkedin.com/in/srob-dev" target="_blank" rel="noopener noreferrer" className="bio__a">
                   LinkedIn
               </a>
           </div>
           <div className="bio__row">
               <FontAwesomeIcon icon={faGithubSquare} />
-              <a href="https://github.com/sRobDev" target="_blank" className="bio__a">
+              <a href="https://github.com/sRobDev" target="_blank" rel="noopener noreferrer" className="bio__a">
                   GitHub
               </a>
           </div>
@@ -114,9 +109,3 @@ const QuickBio = () => {
 }
 
 export default QuickBio
-{/* I'm <strong>{author}</strong> and I live and work in Denver
-        as a UI Engineer.
-        {` `}
-        <a href={`https://twitter.com/${social.twitter}`}>
-          Follow me on Twitter!
-        </a> */}

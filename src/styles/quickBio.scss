@@ -1,9 +1,6 @@
-// @import '../utils/typography.js';
-
 .bio {
     margin: 5px 20px 5px 5px;
-    // background: #e0e0e0; 
-    background: transparent; 
+    background: #e0e0e0;  
     height: 100%;
     position: sticky;
     display: flex;
@@ -52,10 +49,11 @@
     align-items: center;
     padding: 10px 20px 10px 20px;
     justify-content: flex-start;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
 
     &:hover {
-        background: #779ecb;
-        border-radius: 10px;
+        background-color: #779ecb;
         cursor: pointer;
     }
 }
@@ -69,21 +67,8 @@
 }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-    // .bio__extra-info {
-    //     visibility: hidden;
-    //     display: none;
-    // }
-
     .bio {
-        // height: auto;
-        // margin-right: auto;
         width: 100%;
         margin: auto;
     }
-}
-
-@media only screen and (min-width: 480px) {
-    // .bio__expand-icon {
-    //     display: none;
-    // }
 }
