@@ -2,8 +2,9 @@
 
 .bio {
     margin: 5px 20px 5px 5px;
-    background: #e0e0e0; 
-    height: auto;
+    // background: #e0e0e0; 
+    background: transparent; 
+    height: 100%;
     position: sticky;
     display: flex;
     flex-flow: column;
